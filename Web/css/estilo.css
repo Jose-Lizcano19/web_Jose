@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.menu {
+    background-color: #cf0f2f;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.menu ul li {
+    display: inline-block;
+    position: relative; /* Importante para el posicionamiento de los submenús */
+}
+
+.menu ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #0056b3;
+    z-index: 1;
+}
+
+.menu ul li:hover ul {
+    display: block;
+}
+
+.menu ul li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.menu ul li a:hover {
+    background-color: #0056b3;
+}
+
+.menu ul li ul li {
+    display: block;
+}
+
+.menu ul li a:hover {
+    color: #a3a1a1; /* Cambia el color del texto al pasar el cursor */
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    position: relative;
+    width: 25%;
+    height: 100vh;
+    float: left;
+    overflow: hidden;
+}
+
+.container img, .container .text {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover img {
+    transform: scale(1.1);
+}
+
+.container:hover .text {
+    display: block;
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 15px;
+    display: none;
+    z-index: 1;
+}
+
+.img2 {
+    display: none;
+}
+
+.container:hover .img1 {
+    display: none;
+}
+
+.container:hover .img2 {
+    display: block;
+}
